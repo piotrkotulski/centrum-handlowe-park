@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,6 +7,12 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={`${inter.variable} h-full antialiased`}>
+    <html lang="pl" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navigation />
         <main className="flex-1">{children}</main>

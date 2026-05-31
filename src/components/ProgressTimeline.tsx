@@ -38,9 +38,9 @@ export function ProgressTimeline() {
             <p className="text-xs tracking-[0.3em] text-gold mb-4">
               POSTĘP BUDOWY
             </p>
-            <h2 className="text-3xl md:text-4xl font-extralight">
+            <h2 className="text-3xl md:text-4xl font-normal">
               Zaawansowanie{" "}
-              <span className="text-gradient">67%</span>
+              <span className="text-gradient italic">67%</span>
             </h2>
           </div>
         </ScrollReveal>

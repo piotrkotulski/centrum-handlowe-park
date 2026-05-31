@@ -39,8 +39,8 @@ export function VideoShowcase() {
           <p className="text-xs tracking-[0.3em] text-gold mb-4">
             WIDEO
           </p>
-          <h2 className="text-3xl md:text-5xl font-extralight">
-            Zobacz <span className="text-gradient">inwestycję</span>
+          <h2 className="text-3xl md:text-5xl font-normal">
+            Zobacz <span className="text-gradient italic">inwestycję</span>
           </h2>
         </motion.div>
 

@@ -17,10 +17,10 @@ export default function InwestycjaPage() {
             <p className="text-xs tracking-[0.3em] text-gold mb-4">
               O INWESTYCJI
             </p>
-            <h1 className="text-4xl md:text-6xl font-extralight leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-normal leading-tight mb-6">
               Budynek z
               <br />
-              <span className="text-gradient">przyszłością</span>
+              <span className="text-gradient italic">przyszłością</span>
             </h1>
             <p className="text-muted max-w-2xl leading-relaxed">
               Centrum Handlowe PARK to inwestycja łącząca nowoczesną architekturę
@@ -49,8 +49,8 @@ export default function InwestycjaPage() {
               <p className="text-xs tracking-[0.3em] text-gold mb-4">
                 PARAMETRY TECHNICZNE
               </p>
-              <h2 className="text-3xl md:text-4xl font-extralight">
-                Specyfikacja <span className="text-gradient">budynku</span>
+              <h2 className="text-3xl md:text-4xl font-normal">
+                Specyfikacja <span className="text-gradient italic">budynku</span>
               </h2>
             </div>
           </ScrollReveal>
@@ -92,8 +92,8 @@ export default function InwestycjaPage() {
               <p className="text-xs tracking-[0.3em] text-gold mb-4">
                 WYCENA
               </p>
-              <h2 className="text-3xl md:text-4xl font-extralight">
-                Wartość <span className="text-gradient">inwestycji</span>
+              <h2 className="text-3xl md:text-4xl font-normal">
+                Wartość <span className="text-gradient italic">inwestycji</span>
               </h2>
             </div>
           </ScrollReveal>

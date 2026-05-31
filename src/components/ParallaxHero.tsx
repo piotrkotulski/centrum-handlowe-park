@@ -90,11 +90,11 @@ export function ParallaxHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight"
         >
           CENTRUM
           <br />
-          <span className="text-gradient">HANDLOWE</span>
+          <span className="text-gradient italic">HANDLOWE</span>
           <br />
           PARK
         </motion.h1>

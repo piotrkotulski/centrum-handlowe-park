@@ -16,10 +16,10 @@ export default function LokalePage() {
             <p className="text-xs tracking-[0.3em] text-gold mb-4">
               DOSTĘPNE LOKALE
             </p>
-            <h1 className="text-4xl md:text-6xl font-extralight leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-normal leading-tight mb-6">
               Interaktywny plan
               <br />
-              <span className="text-gradient">budynku</span>
+              <span className="text-gradient italic">budynku</span>
             </h1>
             <p className="text-muted max-w-2xl leading-relaxed">
               Wybierz kondygnację i kliknij na interesujący Cię lokal, aby

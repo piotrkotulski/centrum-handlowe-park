@@ -15,10 +15,10 @@ export default function KontaktPage() {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <p className="text-xs tracking-[0.3em] text-gold mb-4">KONTAKT</p>
-            <h1 className="text-4xl md:text-6xl font-extralight leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-normal leading-tight mb-6">
               Porozmawiajmy
               <br />
-              <span className="text-gradient">o Twoim lokalu</span>
+              <span className="text-gradient italic">o Twoim lokalu</span>
             </h1>
             <p className="text-muted max-w-2xl leading-relaxed">
               Jesteś zainteresowany lokalem handlowym, usługowym lub

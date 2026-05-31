@@ -35,8 +35,8 @@ export function HomeFeatures() {
             <p className="text-xs tracking-[0.3em] text-gold mb-4">
               CECHY INWESTYCJI
             </p>
-            <h2 className="text-3xl md:text-5xl font-extralight">
-              Zaprojektowane z <span className="text-gradient">myślą</span>
+            <h2 className="text-3xl md:text-5xl font-normal">
+              Zaprojektowane z <span className="text-gradient italic">myślą</span>
             </h2>
           </div>
         </ScrollReveal>
