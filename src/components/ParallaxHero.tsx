@@ -33,8 +33,8 @@ export function ParallaxHero() {
           <source src={asset("/videos/hero-video-hd.mp4")} type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background/90" />
+        <div className="absolute inset-0 hero-overlay" />
+        <div className="absolute inset-0 hero-gradient" />
 
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-[120px] animate-float" />
@@ -68,83 +68,65 @@ export function ParallaxHero() {
 
       <motion.div
         style={{ opacity }}
-        className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center text-white"
+        className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center text-white hero-text"
       >
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 80 }}
-          transition={{ duration: 1.5, delay: 0.3 }}
-          className="h-px bg-gold mb-8"
-        />
+        <div className="hero-fade-in hero-divider h-px bg-gold mb-8" style={{ animationDelay: "0.3s" }} />
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-xs tracking-[0.4em] text-gold-light mb-6"
+        <p
+          className="hero-fade-in hero-location text-xs tracking-[0.4em] text-white mb-6 font-medium"
+          style={{ animationDelay: "0.5s" }}
         >
           CZĘSTOCHOWA &mdash; UL. WAŃKOWICZA
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white"
+        <h1
+          className="hero-fade-in text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight"
+          style={{ animationDelay: "0.7s" }}
         >
           CENTRUM
           <br />
           <span className="text-gradient italic">HANDLOWE</span>
           <br />
           PARK
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-8 max-w-md text-sm text-white/70 leading-relaxed"
+        <p
+          className="hero-fade-in hero-subtitle mt-8 max-w-md text-sm text-white leading-relaxed"
+          style={{ animationDelay: "0.9s" }}
         >
           Nowoczesny budynek handlowo-usługowo-mieszkalny. 5 kondygnacji
           komfortu, designu i funkcjonalności.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
+        <div
+          className="hero-fade-in mt-10 flex flex-col sm:flex-row gap-4"
+          style={{ animationDelay: "1.1s" }}
         >
           <a
             href={asset("/lokale/")}
-            className="px-8 py-3.5 bg-gold text-dark text-sm tracking-wider font-medium hover:bg-gold-light transition-colors"
+            className="hero-btn-primary rounded-full px-9 py-3.5 bg-gold text-dark text-sm tracking-wider font-medium hover:bg-gold-light transition-colors"
           >
             ZOBACZ LOKALE
           </a>
           <a
             href={asset("/inwestycja/")}
-            className="px-8 py-3.5 border border-white/20 text-white text-sm tracking-wider hover:border-gold hover:text-gold transition-all"
+            className="hero-btn-outline rounded-full px-9 py-3.5 border border-white/50 text-white text-sm tracking-wider hover:border-gold hover:text-gold transition-all"
           >
             O INWESTYCJI
           </a>
-        </motion.div>
+        </div>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+      <div
+        className="hero-fade-in absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+        style={{ animationDelay: "1.5s" }}
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ChevronDown size={20} className="text-gold/50" />
-        </motion.div>
-      </motion.div>
+        <div className="animate-bounce-slow">
+          <ChevronDown size={20} className="hero-chevron text-white/50" />
+        </div>
+      </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-background)] to-transparent z-10" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--color-background)] to-transparent z-10" />
     </section>
   );
 }

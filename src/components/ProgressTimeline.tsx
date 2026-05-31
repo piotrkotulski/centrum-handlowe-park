@@ -56,14 +56,6 @@ export function ProgressTimeline() {
                 className="h-full bg-gradient-to-r from-gold-dark to-gold rounded-full"
               />
             </div>
-            <div className="flex justify-between mt-3">
-              <span className="text-xs text-muted">
-                Wykonano: 12 303 454 zł
-              </span>
-              <span className="text-xs text-muted">
-                Całość: 18 400 000 zł
-              </span>
-            </div>
           </div>
         </ScrollReveal>
 

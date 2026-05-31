@@ -22,6 +22,8 @@ export function Navigation() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const heroOverlay = isHome && !scrolled;
+  const heroLight = heroOverlay && theme === "light";
+  const heroDark = heroOverlay && theme === "dark";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -39,18 +41,18 @@ export function Navigation() {
           heroOverlay
             ? "bg-transparent py-6"
             : "nav-scrolled py-3"
-        }`}
+        } ${heroLight ? "hero-nav-light" : ""}`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="group flex items-center gap-3">
-            <div className={`w-10 h-10 border flex items-center justify-center group-hover:bg-gold/10 transition-colors ${heroOverlay ? "border-gold-light/60" : "border-gold/50"}`}>
-              <span className={`font-bold text-lg ${heroOverlay ? "text-gold-light" : "text-gold"}`}>P</span>
+            <div className={`w-10 h-10 border flex items-center justify-center group-hover:bg-gold/10 transition-colors ${heroDark ? "border-white/50" : heroLight ? "border-foreground/30" : "border-gold/50"}`}>
+              <span className={`font-bold text-lg ${heroDark ? "text-white" : heroLight ? "text-foreground" : "text-gold"}`}>P</span>
             </div>
             <div className="hidden sm:block">
-              <div className={`text-sm font-semibold tracking-[0.2em] ${heroOverlay ? "text-white" : "text-foreground"}`}>
+              <div className={`text-sm font-semibold tracking-[0.2em] ${heroDark ? "text-white" : "text-foreground"}`}>
                 CENTRUM HANDLOWE
               </div>
-              <div className="text-xs tracking-[0.3em] text-gold font-medium">PARK</div>
+              <div className={`text-xs tracking-[0.3em] font-medium ${heroDark ? "text-white/80" : heroLight ? "text-gold" : "text-gold"}`}>PARK</div>
             </div>
           </Link>
 
@@ -59,10 +61,10 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-wider hover:text-gold transition-colors relative group ${heroOverlay ? "text-white/80" : "text-muted"}`}
+                className={`text-sm tracking-wider transition-colors relative group ${heroDark ? "text-white/80 hover:text-white" : heroLight ? "text-foreground/70 hover:text-foreground" : "text-muted hover:text-gold"}`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
+                <span className={`absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300 ${heroDark ? "bg-white" : heroLight ? "bg-foreground" : "bg-gold"}`} />
               </Link>
             ))}
           </nav>
@@ -70,7 +72,7 @@ export function Navigation() {
           <div className="flex items-center gap-4">
             <button
               onClick={toggle}
-              className={`w-9 h-9 flex items-center justify-center border rounded-full hover:border-gold/50 transition-colors ${heroOverlay ? "border-white/30" : "border-dark-border"}`}
+              className={`w-9 h-9 flex items-center justify-center border rounded-full hover:border-gold/50 transition-colors ${heroDark ? "border-white/30" : heroLight ? "border-foreground/20" : "border-dark-border"}`}
               aria-label={theme === "dark" ? "Przełącz na jasny motyw" : "Przełącz na ciemny motyw"}
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -82,7 +84,7 @@ export function Navigation() {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Sun size={16} className="text-gold" />
+                    <Sun size={16} className={heroDark ? "text-white" : heroLight ? "text-foreground" : "text-gold"} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -92,20 +94,20 @@ export function Navigation() {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Moon size={16} className="text-gold" />
+                    <Moon size={16} className={heroDark ? "text-white" : heroLight ? "text-foreground" : "text-gold"} />
                   </motion.div>
                 )}
               </AnimatePresence>
             </button>
             <Link
               href="/kontakt"
-              className="hidden lg:inline-flex px-6 py-2.5 border border-gold/50 text-gold text-sm tracking-wider font-medium hover:bg-gold hover:text-dark transition-all duration-300"
+              className={`hidden lg:inline-flex rounded-full px-6 py-2.5 border text-sm tracking-wider font-medium transition-all duration-300 ${heroDark ? "border-white/50 text-white hover:bg-white/10" : heroLight ? "border-foreground/30 text-foreground hover:bg-foreground/5" : "border-gold/50 text-gold hover:bg-gold hover:text-dark"}`}
             >
               ZAPYTAJ O LOKAL
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
-              className={`lg:hidden p-2 ${heroOverlay ? "text-white" : "text-foreground"}`}
+              className={`lg:hidden p-2 ${heroDark ? "text-white" : "text-foreground"}`}
             >
               <Menu size={24} />
             </button>

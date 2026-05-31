@@ -14,11 +14,11 @@ export default function Home() {
 
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <AnimatedCounter end={5} suffix="" label="Kondygnacji" />
-            <AnimatedCounter end={2146} suffix=" m²" label="Pow. użytkowa" />
-            <AnimatedCounter end={40} suffix="" label="Miejsc parkingowych" />
-            <AnimatedCounter end={67} suffix="%" label="Zaawansowanie budowy" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+            <AnimatedCounter end={5} suffix="" label="Kondygnacji" delay={0} />
+            <AnimatedCounter end={2146} suffix=" m²" label="Pow. użytkowa" delay={0.1} />
+            <AnimatedCounter end={40} suffix="" label="Miejsc parkingowych" delay={0.2} />
+            <AnimatedCounter end={67} suffix="%" label="Zaawansowanie budowy" delay={0.3} />
           </div>
         </div>
       </section>
@@ -27,9 +27,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
-                O PROJEKCIE
-              </p>
+              <p className="section-label mb-4">O projekcie</p>
               <h2 className="text-3xl md:text-5xl font-normal leading-tight mb-6">
                 Przestrzeń stworzona
                 <br />
@@ -68,6 +66,27 @@ export default function Home() {
       </section>
 
       <HomeFeatures />
+
+      <section className="relative h-[60vh] md:h-[85vh] overflow-hidden border-t border-dark-border">
+        <img
+          src={asset("/images/building-facade.jpg")}
+          alt="Gotowa fasada budynku Centrum Handlowe PARK"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15" />
+        <div className="relative z-10 h-full flex items-end">
+          <div className="max-w-7xl mx-auto w-full px-6 pb-16 md:pb-24">
+            <ScrollReveal>
+              <p className="section-label band-heading mb-4">Architektura</p>
+              <h2 className="band-heading text-white text-3xl md:text-5xl lg:text-6xl font-normal leading-tight max-w-3xl">
+                Forma, która <span className="text-gradient italic">definiuje</span>
+                <br />
+                przestrzeń
+              </h2>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
 
       <VideoShowcase />
 

@@ -32,9 +32,7 @@ export function HomeFeatures() {
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
-              CECHY INWESTYCJI
-            </p>
+            <p className="section-label mb-4">Cechy inwestycji</p>
             <h2 className="text-3xl md:text-5xl font-normal">
               Zaprojektowane z <span className="text-gradient italic">myślą</span>
             </h2>
@@ -44,12 +42,14 @@ export function HomeFeatures() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <ScrollReveal key={feature.title} delay={i * 0.1}>
-              <div className="glass p-8 h-full group hover:border-gold/30 transition-all duration-500">
+              <div className="glass rounded-t-3xl rounded-b-md px-7 pt-12 pb-10 h-full text-center flex flex-col items-center group hover:border-gold/30 transition-all duration-500">
                 <feature.icon
-                  size={28}
-                  className="text-gold mb-6 group-hover:scale-110 transition-transform duration-300"
+                  size={24}
+                  className="text-gold/70 mb-6 group-hover:scale-110 transition-transform duration-300"
                 />
-                <h3 className="text-base font-medium mb-3">{feature.title}</h3>
+                <h3 className="font-heading italic uppercase text-lg tracking-wide leading-tight mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-sm text-muted leading-relaxed">
                   {feature.desc}
                 </p>

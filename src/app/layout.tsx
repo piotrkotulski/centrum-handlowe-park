@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -10,10 +10,11 @@ const inter = Inter({
   subsets: ["latin", "latin-ext"],
 });
 
-const playfair = Playfair_Display({
+const bodoni = Bodoni_Moda({
   variable: "--font-playfair",
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -30,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="pl" suppressHydrationWarning className={`${inter.variable} ${bodoni.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <ThemeProvider>
           <Navigation />
           <main className="flex-1">{children}</main>

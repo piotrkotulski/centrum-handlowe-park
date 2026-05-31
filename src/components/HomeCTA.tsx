@@ -16,9 +16,7 @@ export function HomeCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-xs tracking-[0.3em] text-gold font-medium mb-6">
-            ZAINTERESOWANY?
-          </p>
+          <p className="section-label mb-6">Zainteresowany?</p>
           <h2 className="text-3xl md:text-5xl font-normal leading-tight mb-8">
             Znajdź swoje idealne
             <br />
@@ -31,13 +29,13 @@ export function HomeCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={"/kontakt"}
-              className="px-10 py-4 bg-gold text-dark text-sm tracking-wider font-medium hover:bg-gold-light transition-colors"
+              className="rounded-full px-10 py-4 bg-gold text-dark text-sm tracking-wider font-medium hover:bg-gold-light transition-colors"
             >
               SKONTAKTUJ SIĘ
             </a>
             <a
               href={"/lokale"}
-              className="px-10 py-4 border border-gold/40 text-gold text-sm tracking-wider font-medium hover:bg-gold/10 transition-colors"
+              className="rounded-full px-10 py-4 border border-gold/40 text-gold text-sm tracking-wider font-medium hover:bg-gold/10 transition-colors"
             >
               PRZEGLĄDAJ LOKALE
             </a>
