@@ -132,9 +132,8 @@ export default function InwestycjaPage() {
 
           <ScrollReveal delay={0.3}>
             <p className="text-xs text-muted text-center mt-8">
-              Operat szacunkowy: mgr inż. Agnieszka Mazur, Kancelaria M-4,
-              Częstochowa (29.12.2025). Metoda porównywania parami. Ważny do
-              29.12.2026.
+              Wycena na podstawie operatu szacunkowego (12.2025).
+              Metoda porównywania parami.
             </p>
           </ScrollReveal>
         </div>

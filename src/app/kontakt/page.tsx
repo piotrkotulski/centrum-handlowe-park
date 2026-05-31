@@ -93,25 +93,6 @@ export default function KontaktPage() {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.2}>
-                <div className="glass p-8">
-                  <h3 className="text-sm tracking-wider text-gold mb-4">
-                    INWESTOR
-                  </h3>
-                  <p className="text-sm text-foreground">
-                    Centrum Handlowe PARK Sp. z o.o.
-                  </p>
-                  <p className="text-sm text-muted mt-2">
-                    ul. Jeździecka 19
-                    <br />
-                    53-032 Wrocław
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-dark-border">
-                    <p className="text-xs text-muted">NIP: 8943169892</p>
-                    <p className="text-xs text-muted">REGON: 389348670</p>
-                  </div>
-                </div>
-              </ScrollReveal>
             </div>
           </div>
         </div>

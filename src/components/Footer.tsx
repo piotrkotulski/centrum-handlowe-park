@@ -79,13 +79,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-dark-border flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-dark-border flex items-center justify-center">
           <p className="text-muted text-xs">
-            &copy; 2026 Centrum Handlowe PARK Sp. z o.o. Wszystkie prawa
-            zastrzeżone.
-          </p>
-          <p className="text-muted text-xs">
-            NIP: 8943169892 | REGON: 389348670
+            &copy; 2026 Centrum Handlowe PARK. Wszystkie prawa zastrzeżone.
           </p>
         </div>
       </div>
