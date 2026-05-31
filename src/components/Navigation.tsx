@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
@@ -18,6 +19,9 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggle } = useTheme();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const heroOverlay = isHome && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -32,18 +36,18 @@ export function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "nav-scrolled py-3"
-            : "bg-transparent py-6"
+          heroOverlay
+            ? "bg-transparent py-6"
+            : "nav-scrolled py-3"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="group flex items-center gap-3">
-            <div className={`w-10 h-10 border flex items-center justify-center group-hover:bg-gold/10 transition-colors ${scrolled ? "border-gold/50" : "border-gold-light/60"}`}>
-              <span className={`font-bold text-lg ${scrolled ? "text-gold" : "text-gold-light"}`}>P</span>
+            <div className={`w-10 h-10 border flex items-center justify-center group-hover:bg-gold/10 transition-colors ${heroOverlay ? "border-gold-light/60" : "border-gold/50"}`}>
+              <span className={`font-bold text-lg ${heroOverlay ? "text-gold-light" : "text-gold"}`}>P</span>
             </div>
             <div className="hidden sm:block">
-              <div className={`text-sm font-semibold tracking-[0.2em] ${scrolled ? "text-foreground" : "text-white"}`}>
+              <div className={`text-sm font-semibold tracking-[0.2em] ${heroOverlay ? "text-white" : "text-foreground"}`}>
                 CENTRUM HANDLOWE
               </div>
               <div className="text-xs tracking-[0.3em] text-gold font-medium">PARK</div>
@@ -55,7 +59,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-wider hover:text-gold transition-colors relative group ${scrolled ? "text-muted" : "text-white/80"}`}
+                className={`text-sm tracking-wider hover:text-gold transition-colors relative group ${heroOverlay ? "text-white/80" : "text-muted"}`}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
@@ -66,7 +70,7 @@ export function Navigation() {
           <div className="flex items-center gap-4">
             <button
               onClick={toggle}
-              className={`w-9 h-9 flex items-center justify-center border rounded-full hover:border-gold/50 transition-colors ${scrolled ? "border-dark-border" : "border-white/30"}`}
+              className={`w-9 h-9 flex items-center justify-center border rounded-full hover:border-gold/50 transition-colors ${heroOverlay ? "border-white/30" : "border-dark-border"}`}
               aria-label={theme === "dark" ? "Przełącz na jasny motyw" : "Przełącz na ciemny motyw"}
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -101,7 +105,7 @@ export function Navigation() {
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
-              className={`lg:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
+              className={`lg:hidden p-2 ${heroOverlay ? "text-white" : "text-foreground"}`}
             >
               <Menu size={24} />
             </button>
