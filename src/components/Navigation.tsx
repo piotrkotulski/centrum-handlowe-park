@@ -32,16 +32,18 @@ export function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-dark/95 backdrop-blur-md border-b border-dark-border py-3" : "bg-transparent py-6"
+          scrolled
+            ? "nav-scrolled py-3"
+            : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="group flex items-center gap-3">
-            <div className="w-10 h-10 border border-gold/50 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
-              <span className="text-gold font-bold text-lg">P</span>
+            <div className={`w-10 h-10 border flex items-center justify-center group-hover:bg-gold/10 transition-colors ${scrolled ? "border-gold/50" : "border-gold-light/60"}`}>
+              <span className={`font-bold text-lg ${scrolled ? "text-gold" : "text-gold-light"}`}>P</span>
             </div>
             <div className="hidden sm:block">
-              <div className="text-sm font-semibold tracking-[0.2em] text-foreground">
+              <div className={`text-sm font-semibold tracking-[0.2em] ${scrolled ? "text-foreground" : "text-white"}`}>
                 CENTRUM HANDLOWE
               </div>
               <div className="text-xs tracking-[0.3em] text-gold">PARK</div>
@@ -53,7 +55,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm tracking-wider text-muted hover:text-gold transition-colors relative group"
+                className={`text-sm tracking-wider hover:text-gold transition-colors relative group ${scrolled ? "text-muted" : "text-white/80"}`}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
@@ -64,7 +66,7 @@ export function Navigation() {
           <div className="flex items-center gap-4">
             <button
               onClick={toggle}
-              className="w-9 h-9 flex items-center justify-center border border-dark-border rounded-full hover:border-gold/50 transition-colors"
+              className={`w-9 h-9 flex items-center justify-center border rounded-full hover:border-gold/50 transition-colors ${scrolled ? "border-dark-border" : "border-white/30"}`}
               aria-label={theme === "dark" ? "Przełącz na jasny motyw" : "Przełącz na ciemny motyw"}
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -99,7 +101,7 @@ export function Navigation() {
             </Link>
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden text-foreground p-2"
+              className={`lg:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
             >
               <Menu size={24} />
             </button>

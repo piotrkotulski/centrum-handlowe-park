@@ -31,12 +31,12 @@ html[data-theme="light"] {
   --surface: #f0ece6;
   --card: #ffffff;
   --border: #ddd5c8;
-  --muted: #6b6b6b;
+  --muted: #5a5a5a;
   --glass-bg: rgba(255, 255, 255, 0.75);
   --glass-border: rgba(160, 125, 63, 0.2);
-  --color-gold: #a07d3f;
-  --color-gold-light: #b8944f;
-  --color-gold-dark: #8a6a30;
+  --color-gold: #8a6a30;
+  --color-gold-light: #a07d3f;
+  --color-gold-dark: #6d5225;
 }
 
 html {
@@ -141,4 +141,19 @@ h1, h2 {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+/* ── Navbar scrolled ── */
+.nav-scrolled {
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .nav-scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom-color: #ddd5c8;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }

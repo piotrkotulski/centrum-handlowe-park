@@ -68,7 +68,7 @@ export function ParallaxHero() {
 
       <motion.div
         style={{ opacity }}
-        className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center"
+        className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center text-white"
       >
         <motion.div
           initial={{ width: 0 }}
@@ -81,7 +81,7 @@ export function ParallaxHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-xs tracking-[0.4em] text-gold mb-6"
+          className="text-xs tracking-[0.4em] text-gold-light mb-6"
         >
           CZĘSTOCHOWA &mdash; UL. WAŃKOWICZA
         </motion.p>
@@ -90,7 +90,7 @@ export function ParallaxHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white"
         >
           CENTRUM
           <br />
@@ -103,7 +103,7 @@ export function ParallaxHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-8 max-w-md text-sm text-muted leading-relaxed"
+          className="mt-8 max-w-md text-sm text-white/70 leading-relaxed"
         >
           Nowoczesny budynek handlowo-usługowo-mieszkalny. 5 kondygnacji
           komfortu, designu i funkcjonalności.
@@ -123,7 +123,7 @@ export function ParallaxHero() {
           </a>
           <a
             href={asset("/inwestycja/")}
-            className="px-8 py-3.5 border border-foreground/20 text-sm tracking-wider hover:border-gold hover:text-gold transition-all"
+            className="px-8 py-3.5 border border-white/20 text-white text-sm tracking-wider hover:border-gold hover:text-gold transition-all"
           >
             O INWESTYCJI
           </a>
