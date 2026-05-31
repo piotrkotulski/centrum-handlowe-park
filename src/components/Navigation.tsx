@@ -46,7 +46,7 @@ export function Navigation() {
               <div className={`text-sm font-semibold tracking-[0.2em] ${scrolled ? "text-foreground" : "text-white"}`}>
                 CENTRUM HANDLOWE
               </div>
-              <div className="text-xs tracking-[0.3em] text-gold">PARK</div>
+              <div className="text-xs tracking-[0.3em] text-gold font-medium">PARK</div>
             </div>
           </Link>
 
@@ -95,7 +95,7 @@ export function Navigation() {
             </button>
             <Link
               href="/kontakt"
-              className="hidden lg:inline-flex px-6 py-2.5 border border-gold/50 text-gold text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300"
+              className="hidden lg:inline-flex px-6 py-2.5 border border-gold/50 text-gold text-sm tracking-wider font-medium hover:bg-gold hover:text-dark transition-all duration-300"
             >
               ZAPYTAJ O LOKAL
             </Link>

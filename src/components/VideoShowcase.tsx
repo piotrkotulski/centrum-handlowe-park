@@ -36,7 +36,7 @@ export function VideoShowcase() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <p className="text-xs tracking-[0.3em] text-gold mb-4">
+          <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
             WIDEO
           </p>
           <h2 className="text-3xl md:text-5xl font-normal">

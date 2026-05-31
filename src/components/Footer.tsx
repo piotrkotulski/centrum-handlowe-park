@@ -17,7 +17,7 @@ export function Footer() {
                 <div className="text-sm font-semibold tracking-[0.2em]">
                   CENTRUM HANDLOWE
                 </div>
-                <div className="text-xs tracking-[0.3em] text-gold">PARK</div>
+                <div className="text-xs tracking-[0.3em] text-gold font-medium">PARK</div>
               </div>
             </div>
             <p className="text-muted text-sm leading-relaxed">

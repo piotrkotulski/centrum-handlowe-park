@@ -16,7 +16,7 @@ export function HomeCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-xs tracking-[0.3em] text-gold mb-6">
+          <p className="text-xs tracking-[0.3em] text-gold font-medium mb-6">
             ZAINTERESOWANY?
           </p>
           <h2 className="text-3xl md:text-5xl font-normal leading-tight mb-8">
@@ -37,7 +37,7 @@ export function HomeCTA() {
             </a>
             <a
               href={"/lokale"}
-              className="px-10 py-4 border border-gold/30 text-gold text-sm tracking-wider hover:bg-gold/10 transition-colors"
+              className="px-10 py-4 border border-gold/40 text-gold text-sm tracking-wider font-medium hover:bg-gold/10 transition-colors"
             >
               PRZEGLĄDAJ LOKALE
             </a>

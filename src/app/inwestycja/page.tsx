@@ -14,7 +14,7 @@ export default function InwestycjaPage() {
       <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-xs tracking-[0.3em] text-gold mb-4">
+            <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
               O INWESTYCJI
             </p>
             <h1 className="text-4xl md:text-6xl font-normal leading-tight mb-6">
@@ -46,7 +46,7 @@ export default function InwestycjaPage() {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-xs tracking-[0.3em] text-gold mb-4">
+              <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
                 PARAMETRY TECHNICZNE
               </p>
               <h2 className="text-3xl md:text-4xl font-normal">
@@ -89,7 +89,7 @@ export default function InwestycjaPage() {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-xs tracking-[0.3em] text-gold mb-4">
+              <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
                 WYCENA
               </p>
               <h2 className="text-3xl md:text-4xl font-normal">

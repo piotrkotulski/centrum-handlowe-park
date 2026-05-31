@@ -28,7 +28,7 @@ export function LocationMap() {
       <div className="max-w-7xl mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] text-gold mb-4">
+            <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
               LOKALIZACJA
             </p>
             <h2 className="text-3xl md:text-5xl font-heading font-normal leading-tight">

@@ -27,7 +27,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <p className="text-xs tracking-[0.3em] text-gold mb-4">
+              <p className="text-xs tracking-[0.3em] text-gold font-medium mb-4">
                 O PROJEKCIE
               </p>
               <h2 className="text-3xl md:text-5xl font-normal leading-tight mb-6">
