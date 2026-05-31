@@ -42,7 +42,7 @@ export function LocationMap() {
             <div className="relative aspect-[21/9] overflow-hidden">
               <iframe
                 src="https://www.openstreetmap.org/export/embed.html?bbox=19.0850%2C50.8230%2C19.1050%2C50.8340&layer=mapnik&marker=50.8285%2C19.0950"
-                className="absolute inset-0 w-full h-full border-0 grayscale-[70%] contrast-[1.1] brightness-[0.7] hue-rotate-[20deg]"
+                className="absolute inset-0 w-full h-full border-0 grayscale-[40%] contrast-[1.05]"
                 loading="lazy"
                 title="Lokalizacja Centrum Handlowe PARK"
               />

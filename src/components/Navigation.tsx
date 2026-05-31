@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 const links = [
   { href: "/", label: "Start" },
@@ -16,6 +17,7 @@ const links = [
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -60,6 +62,35 @@ export function Navigation() {
           </nav>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={toggle}
+              className="w-9 h-9 flex items-center justify-center border border-dark-border rounded-full hover:border-gold/50 transition-colors"
+              aria-label={theme === "dark" ? "Przełącz na jasny motyw" : "Przełącz na ciemny motyw"}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {theme === "dark" ? (
+                  <motion.div
+                    key="sun"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Sun size={16} className="text-gold" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="moon"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Moon size={16} className="text-gold" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
             <Link
               href="/kontakt"
               className="hidden lg:inline-flex px-6 py-2.5 border border-gold/50 text-gold text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300"
